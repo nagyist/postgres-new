@@ -2,6 +2,7 @@ const providerUrlMap = new Map([
   ['openai', 'https://api.openai.com/v1'],
   ['x-ai', 'https://api.x.ai/v1'],
   ['openrouter', 'https://openrouter.ai/api/v1'],
+  ['litellm', 'http://localhost:4000/v1'],
 ] as const)
 
 type MapKeys<T> = T extends Map<infer K, any> ? K : never
