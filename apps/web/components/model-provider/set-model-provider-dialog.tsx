@@ -132,6 +132,15 @@ function SetModelProviderForm(props: { id: string; onSubmit: (values: FormSchema
                       >
                         OpenRouter
                       </MiniButton>
+                      <MiniButton
+                        onClick={(e) => {
+                          e.preventDefault()
+                          form.setValue('baseUrl', getProviderUrl('litellm'))
+                          form.setValue('model', 'openai/gpt-4o-mini')
+                        }}
+                      >
+                        LiteLLM
+                      </MiniButton>
                     </div>
                   </>
                 </FormControl>
